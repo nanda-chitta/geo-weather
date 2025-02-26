@@ -1,0 +1,118 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/weather?appid=e0252f5c0e218ca79da23c1071d66bca&q=Mumbai,%20IN&units=metric
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.8.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Wed, 26 Feb 2025 12:40:51 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '494'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/weather?q=mumbai%2c+in&units=metric"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"coord":{"lon":72.8479,"lat":19.0144},"weather":[{"id":711,"main":"Smoke","description":"smoke","icon":"50d"}],"base":"stations","main":{"temp":31.99,"feels_like":31.18,"temp_min":30.94,"temp_max":31.99,"pressure":1012,"humidity":33,"sea_level":1012,"grnd_level":1012},"visibility":3000,"wind":{"speed":2.57,"deg":250},"clouds":{"all":0},"dt":1740573383,"sys":{"type":1,"id":9052,"country":"IN","sunrise":1740533416,"sunset":1740575588},"timezone":19800,"id":1275339,"name":"Mumbai","cod":200}'
+  recorded_at: Wed, 26 Feb 2025 12:40:51 GMT
+- request:
+    method: get
+    uri: https://nominatim.openstreetmap.org/search?accept-language=en&addressdetails=1&format=json&q=Mumbai,%20IN
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 26 Feb 2025 12:50:39 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '536'
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=20
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sicGxhY2VfaWQiOjIyOTA5NTcwOSwibGljZW5jZSI6IkRhdGEgwqkgT3BlblN0cmVldE1hcCBjb250cmlidXRvcnMsIE9EYkwgMS4wLiBodHRwOi8vb3NtLm9yZy9jb3B5cmlnaHQiLCJvc21fdHlwZSI6InJlbGF0aW9uIiwib3NtX2lkIjo3OTY0Mzc1LCJsYXQiOiIxOS4wNTQ5OTkiLCJsb24iOiI3Mi44NjkyMDM1IiwiY2xhc3MiOiJib3VuZGFyeSIsInR5cGUiOiJhZG1pbmlzdHJhdGl2ZSIsInBsYWNlX3JhbmsiOjEwLCJpbXBvcnRhbmNlIjowLjcwOTc4NTYyODc3MDAxMTIsImFkZHJlc3N0eXBlIjoiY2l0eSIsIm5hbWUiOiJNdW1iYWkiLCJkaXNwbGF5X25hbWUiOiJNdW1iYWksIE1haGFyYXNodHJhLCBJbmRpYSIsImFkZHJlc3MiOnsiY2l0eSI6Ik11bWJhaSIsInN0YXRlIjoiTWFoYXJhc2h0cmEiLCJJU08zMTY2LTItbHZsNCI6IklOLU1IIiwiY291bnRyeSI6IkluZGlhIiwiY291bnRyeV9jb2RlIjoiaW4ifSwiYm91bmRpbmdib3giOlsiMTguOTkxNjQ3OSIsIjE5LjI2OTQ3NzEiLCI3Mi43NzYzMzMwIiwiNzIuOTgxNzQ4NSJdfV0=
+  recorded_at: Wed, 26 Feb 2025 12:50:39 GMT
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/weather?appid=e0252f5c0e218ca79da23c1071d66bca&q=Mumbai&units=metric
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.8.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Wed, 26 Feb 2025 12:50:39 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '494'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/weather?q=mumbai&units=metric"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"coord":{"lon":72.8479,"lat":19.0144},"weather":[{"id":711,"main":"Smoke","description":"smoke","icon":"50d"}],"base":"stations","main":{"temp":31.99,"feels_like":31.18,"temp_min":30.94,"temp_max":31.99,"pressure":1012,"humidity":33,"sea_level":1012,"grnd_level":1012},"visibility":3000,"wind":{"speed":2.57,"deg":250},"clouds":{"all":0},"dt":1740573783,"sys":{"type":1,"id":9052,"country":"IN","sunrise":1740533416,"sunset":1740575588},"timezone":19800,"id":1275339,"name":"Mumbai","cod":200}'
+  recorded_at: Wed, 26 Feb 2025 12:50:39 GMT
+recorded_with: VCR 6.3.1

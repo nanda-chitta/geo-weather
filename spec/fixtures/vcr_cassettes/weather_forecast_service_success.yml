@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/weather?appid=e0252f5c0e218ca79da23c1071d66bca&q=Los%20Angeles&units=metric
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.8.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Wed, 26 Feb 2025 19:39:43 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '521'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/weather?q=los+angeles&units=metric"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"coord":{"lon":-118.2437,"lat":34.0522},"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"base":"stations","main":{"temp":25.32,"feels_like":25.16,"temp_min":22.44,"temp_max":27.89,"pressure":1015,"humidity":48,"sea_level":1015,"grnd_level":996},"visibility":10000,"wind":{"speed":2.98,"deg":240,"gust":1.88},"clouds":{"all":0},"dt":1740598541,"sys":{"type":2,"id":2075946,"country":"US","sunrise":1740579910,"sunset":1740620807},"timezone":-28800,"id":5368361,"name":"Los
+        Angeles","cod":200}'
+  recorded_at: Wed, 26 Feb 2025 19:39:44 GMT
+recorded_with: VCR 6.3.1
