@@ -10,7 +10,6 @@ export const API = axios.create({
 })
 
 export const fetchRequest = async ({ url, data, method }: any) => {
-  console.log('Fetching data...', url, data, method);
   try {
     const response: any = await API(url, {
       headers: {
@@ -29,7 +28,6 @@ export const fetchRequest = async ({ url, data, method }: any) => {
 
 export const searchForecast = async (data: any, dispatch: any) => {
   const dataStr = data ? data?.search?.trim() : '';
-  console.log('searching for forecast...', dataStr)
    try {
      const response = await fetchRequest({
        url: `/api/v1/forecasts/search?search=${dataStr}`,

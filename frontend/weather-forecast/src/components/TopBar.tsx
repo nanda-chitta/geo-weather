@@ -29,7 +29,6 @@ const TopBar = () => {
   };
 
   const handleSearch = async (data: any) => {
-    console.log('search data', data);
     await searchForecast(data, dispatch);
   };
 

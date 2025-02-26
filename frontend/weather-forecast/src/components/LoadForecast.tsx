@@ -3,8 +3,6 @@ import {WiSunrise, WiSunset} from "react-icons/wi";
 
 const LoadForecast = ({forecast}: any) => {
 
-  console.log('forecast', forecast);
-
   return (
     <>
       <div
