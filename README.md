@@ -17,6 +17,24 @@
 
 This app is developed on a MacBook Pro M1 with macOS Sequoia.
 
+### Install node using nvm
+
+```sh
+$ cd ~
+$ touch .zshrc
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+$ export NVM_DIR="$HOME/.nvm"
+   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+$ source ~/.zshrc   
+```
+Install LTS version of Node
+
+```sh
+$ nvm install --lts
+$ nvm use --lts
+$ nvm alias default v20.18.3
+```
 
 ### Install RVM
 
@@ -64,9 +82,26 @@ Create default ruby version
 ```sh
 $ rvm alias create default 2.7.1
 ```
-### clone the repo
+### Clone the repo
 
 ```sh
 
-```
+$ git clone git@github.com:nanda-chitta/geo-weather.git
+$ cd geo-weather
+$ git checkout master
+$ gem install bundler
+$ bundle install
+$ cd frontend/weather-forecast
+$ npm install
+$ cd -
+$ bundle exec rails db:create # creates the database
+$ bundle exec rails db:migrate # create the schema in the database
 
+```
+### Run the server
+
+```sh
+$ foreman start
+# open http://localhost:3000/ in your browser and see the weather forecast app. 
+$ bundle exec rspec # runs rspec unit tests
+```

@@ -11,12 +11,12 @@ default: &default
 
 development:
   <<: *default
-  database: <%= ENV['DEV_DB_NAME'] %>
+  database: <%= ENV['DEV_DB_NAME'] || 'weather_dev' %>
 
 test:
   <<: *default
-  database: <%= ENV['TEST_DB_NAME'] %>
+  database: <%= ENV['TEST_DB_NAME'] || 'weather_test' %>
 
 production:
   <<: *default
-  database: <%= ENV['PROD_DB_NAME'] %>
+  database: <%= ENV['PROD_DB_NAME'] || 'weather_prod' %>
