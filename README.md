@@ -67,7 +67,7 @@ We will get this message
 Install some ruby version such as 2.7.7
 
 ```sh
-$ rvm install 2.7.1
+$ rvm install 2.7.7
 ```
 After installation, check which ruby version available.
 
@@ -80,7 +80,7 @@ ruby-2.7.7 [ x86_64 ]
 Create default ruby version
 
 ```sh
-$ rvm alias create default 2.7.1
+$ rvm alias create default 2.7.7
 ```
 ### Clone the repo
 
