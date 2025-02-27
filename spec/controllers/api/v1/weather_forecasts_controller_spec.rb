@@ -22,6 +22,7 @@ RSpec.describe Api::V1::WeatherForecastsController, type: :controller do
           'temperature_max' => 31.99,
           'temperature_min' => 30.94,
           'time' => '06:43:03',
+          'type' => 'Smoke',
           'wind_speed' => 2.57
         }
       end
@@ -48,6 +49,7 @@ RSpec.describe Api::V1::WeatherForecastsController, type: :controller do
           'description' => 'Fog',
           'date' => '2025-02-26',
           'time' => '02:44:01',
+          'type' => 'Fog',
           'city' => 'Los Angeles',
           'location' => 'Los Angeles',
           'icon' => '50n',

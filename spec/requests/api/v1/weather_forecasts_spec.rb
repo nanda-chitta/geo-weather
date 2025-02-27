@@ -19,6 +19,7 @@ RSpec.describe Api::V1::WeatherForecastsController, type: :request do
             'description' => 'Clear Sky',
             'date' => '2025-02-26',
             'time' => '06:53:04',
+            'type' => 'Clear',
             'city' => 'New York',
             'location' => 'New York',
             'icon' => '01d',

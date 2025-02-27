@@ -43,6 +43,7 @@ module HandleResponse
       pressure: data&.dig('main', 'pressure'),
       humidity: data&.dig('main', 'humidity'),
       wind_speed: data&.dig('wind', 'speed'),
+      type: data&.dig('weather', 0, 'main').try(:titleize),
       description: data&.dig('weather', 0, 'description').try(:titleize),
       date: Time.zone.at(data&.dig('dt')).to_datetime.strftime('%Y-%m-%d'),
       time: Time.zone.at(data&.dig('dt')).to_datetime.strftime('%H:%M:%S'),

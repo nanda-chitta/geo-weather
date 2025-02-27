@@ -32,3 +32,4 @@
 /config/application.yml
 .idea
 /frontend/weather-forecast/node_modules
+coverage
