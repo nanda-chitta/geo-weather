@@ -6,9 +6,9 @@ const LoadForecast = ({forecast}: any) => {
   return (
     <>
       <div
-        className="flex flex-col items-center justify-center w-screen min-h-screen py-10">
+        className="flex items-center justify-center w-screen min-h-screen min-h-5 py-6">
         <div
-          className='flex-1 w-full justify-center max-w-screen-sm bg-primary p-10 rounded-xl ring-8 ring-ascent-1 ring-opacity-40'>
+          className='flex-1 w-full justify-center max-w-screen-sm bg-primary p-10 rounded-xl ring-8 ring-ascent-1 ring-opacity-40 top-0'>
           {
             forecast ? (
               <div className='gap-2 justify-center'>

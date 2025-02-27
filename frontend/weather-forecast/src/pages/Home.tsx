@@ -28,10 +28,10 @@ const Home = () => {
         <div className='flex-1 h-full px-4 flex flex-col gap-6 overflow-y-auto rounded-lg py-3 md:py-4 lg:px-10 pb-20 2xl:px-40'>
           <div className='w-full flex flex-col gap-2 bg-primary py-4 px-4 rounded-lg'>
             <div className='flex flex-col gap-4 items-center'>
-              <h2 className='text-small text-ascent-1 font-semibold'>Welcome to Weather Forecast</h2>
+              <h2 className='text-md text-ascent-1 font-semibold'>Welcome to Weather Forecast</h2>
               <p className='text-sm text-ascent-1 text-gray-600'>Get the latest weather updates for your city</p>
             </div>
-            <div className='flex flex-col gap-4 items-center'>
+            <div className='flex flex-col items-center justify-center py-4'>
               {
                 loading ? (
                   <Loading/>
