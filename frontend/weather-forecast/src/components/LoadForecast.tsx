@@ -1,12 +1,29 @@
 import React from 'react'
-import {WiSunrise, WiSunset} from "react-icons/wi";
+import {
+  WiCloud,
+  WiDayHaze,
+  WiDayShowers,
+  WiDaySleetStorm,
+  WiDust,
+  WiFog,
+  WiHail,
+  WiRain,
+  WiRaindrops,
+  WiSandstorm,
+  WiSmoke,
+  WiSnow,
+  WiSunrise,
+  WiSunset,
+  WiThunderstorm,
+  WiTornado
+} from 'react-icons/wi';
 
 const LoadForecast = ({forecast}: any) => {
 
   return (
     <>
       <div
-        className="flex items-center justify-center w-screen min-h-screen min-h-5 py-6">
+        className="flex items-center justify-center min-h-5 w-screen py-6">
         <div
           className='flex-1 w-full justify-center max-w-screen-sm bg-primary p-10 rounded-xl ring-8 ring-ascent-1 ring-opacity-40 top-0'>
           {
@@ -27,8 +44,48 @@ const LoadForecast = ({forecast}: any) => {
                     <span className="font-semibold text-ascent-1 pt-8">{forecast?.city}</span>
                   </div>
                   <div className="flex flex-col items-center">
-                    <img src={forecast?.iconUrl} alt={forecast?.description} width={100} height={100}
-                         className='bg-none fill-white border-[#66666645] rounded -mt-6'/>
+                    {(() => {
+                      switch (forecast?.type) {
+                        case 'Clear':
+                          return <WiSunrise className='text-6xl text-ascent-1 mb-2'/>
+                        case 'Rain':
+                          return <WiRain className='text-6xl text-ascent-1 mb-2'/>
+                        case 'Snow':
+                          return <WiSnow className='text-6xl text-ascent-1 mb-2'/>
+                        case 'Clouds':
+                          return <WiCloud className='text-6xl text-ascent-1 mb-2'/>
+                        case 'Thunderstorm':
+                          return <WiThunderstorm className='text-6xl text-ascent-1 mb-2'/>
+                        case 'Fog':
+                          return <WiFog className='text-6xl text-ascent-1 mb-2'/>
+                        case 'Haze':
+                          return <WiDayHaze className='text-6xl text-ascent-1 mb-2'/>
+                        case 'Smoke':
+                          return <WiSmoke className='text-6xl text-ascent-1 mb-2'/>
+                        case 'Tornado':
+                          return <WiTornado className='text-6xl text-ascent-1 mb-2'/>
+                        case 'Hail':
+                          return <WiHail className='text-6xl text-ascent-1 mb-2'/>
+                        case 'Dust':
+                          return <WiDust className='text-6xl text-ascent-1 mb-2'/>
+                        case 'Sand':
+                          return <WiSandstorm className='text-6xl text-ascent-1 mb-2'/>
+                        case 'Squall':
+                          return <WiDaySleetStorm className='text-6xl text-ascent-1 mb-2'/>
+                        case 'Dust2':
+                          return <WiDayShowers className='text-6xl text-ascent-1 mb-2'/>
+                        case 'Widespread Dust':
+                          return <WiDaySleetStorm className='text-6xl text-ascent-1 mb-2'/>
+                        case 'Shower Rain':
+                          return <WiRaindrops className='text-6xl text-ascent-1 mb-2'/>
+                        default:
+                          return <img src={forecast?.iconUrl} alt={forecast?.description} width={100} height={100}
+                                      className='bg-none fill-white border-[#66666645] rounded -mt-6'/>
+                      }
+                    })()}
+
+                    {/*<img src={forecast?.iconUrl} alt={forecast?.description} width={100} height={100}*/}
+                    {/*     className='bg-none fill-white border-[#66666645] rounded -mt-6'/>*/}
                     <span className="text-sm font-semibold text-ascent-1">{forecast?.description}</span>
                   </div>
                 </div>
